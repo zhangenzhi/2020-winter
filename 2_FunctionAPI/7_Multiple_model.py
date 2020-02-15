@@ -29,6 +29,7 @@ def autoencoder():
     # return autoencoder
 
 def multi_model():
+    
     # multi input - multi models - chain them together
     encoder_input = keras.Input(shape = (28,28,1),name = 'original_img')
     x = layers.Conv2D(16,3,activation = 'relu')(encoder_input)
@@ -105,4 +106,4 @@ def multi_input_output():
 
 
 if __name__ == "__main__":
-    multi_input_output()
+    multi_model()
